@@ -14,7 +14,6 @@ const int led = 13;
 
 BlinkerButton Button1("btn-max");                 //注册按钮
 BlinkerButton Button2("btn-min"); 
-BlinkerText Text1(TEXTE_1);
 int servo_max=180,servo_min=0;
 
 int calculatePWM(int degree)                      //PWM空占比计算
@@ -495,7 +494,6 @@ void setup()
 
 
   pinMode(2,OUTPUT);                                  //ESP8266，Builtin LED内置的灯引脚模式
-  pinMode(12,OUTPUT);                                 //继电器输出引脚
   pinMode(14,INPUT);                                  //FPM383C的2脚TouchOUT引脚，用于外部中断
   Blinker.attachData(DataRead);
   Button_OneEnroll.attach(OneEnroll_callback);
